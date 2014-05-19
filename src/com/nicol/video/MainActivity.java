@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -36,6 +37,8 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 			}
 		}, 3000);
+		
+		
 
 		// VideoView vd1=(VideoView) findViewById(R.id.videoView1);
 		// VideoView vd2=(VideoView) findViewById(R.id.videoView2);
@@ -53,7 +56,7 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 }
