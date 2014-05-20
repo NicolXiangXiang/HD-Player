@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30px"
+    android:layout_marginRight="30px"
+    android:background="#000000" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26px"
+        android:layout_marginTop="26px" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb3"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26px"
+        android:layout_marginTop="26px" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb4"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb5"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb6"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26px"
+        android:layout_marginTop="26px" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb7"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb8"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="280px"
+                android:layout_height="375px"
+                android:layout_marginTop="6px"
+                android:background="@drawable/imageview_bg" />
+
+            <CheckBox
+                android:id="@+id/cb9"
+                android:layout_width="280px"
+                android:layout_height="381px"
+                android:background="@drawable/movie_checkbox"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+    </TableRow>
+
+</TableLayout>

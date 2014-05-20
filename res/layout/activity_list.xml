@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/linear1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="125px"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/top_bg"
@@ -45,22 +45,16 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:src="@drawable/download_btn" />
-
-        <CheckBox
-            android:id="@+id/checkBox1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/language_btn"
-            android:button="@null"
-            android:checked="true" />
     </LinearLayout>
+    <include
+        layout="@layout/nav" android:id="@+id/nav1" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="694dp"
-        android:layout_below="@id/linear1"
+        android:layout_height="694px"
+        android:layout_below="@id/nav1"
+        android:layout_marginTop="-30px" 
         android:layout_weight="1" >
     </android.support.v4.view.ViewPager>
 
@@ -69,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/pager"
-        android:layout_marginTop="-61dp" />
+        android:layout_marginTop="-61px" />
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -77,199 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/pager" >
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <TableRow
-                android:id="@+id/tableRow1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m1" />
-
-                    <CheckBox
-                        android:id="@+id/cb1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m2" />
-
-                    <CheckBox
-                        android:id="@+id/cb2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m3" />
-
-                    <CheckBox
-                        android:id="@+id/cb3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m4" />
-
-                    <CheckBox
-                        android:id="@+id/cb4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m5" />
-
-                    <CheckBox
-                        android:id="@+id/cb5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m6" />
-
-                    <CheckBox
-                        android:id="@+id/cb6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m7" />
-
-                    <CheckBox
-                        android:id="@+id/cb7"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m8" />
-
-                    <CheckBox
-                        android:id="@+id/cb8"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" >
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/m9" />
-
-                    <CheckBox
-                        android:id="@+id/cb9"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/movie_checkbox"
-                        android:button="@null" />
-                </RelativeLayout>
-            </TableRow>
-        </TableLayout>
+        <include layout="@layout/list_partial" />
     </ScrollView>
+
+    <include layout="@layout/setting" android:layout_alignParentRight="true"  />
 
 </RelativeLayout>

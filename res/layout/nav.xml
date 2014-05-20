@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="198px"
+    android:background="@drawable/top2_bg"
+    android:layout_below="@id/linear1"
+    android:id="@+id/nav1"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/search_btn"
+        android:background="@null"
+        android:textColor="#fff"
+        android:drawablePadding="15sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+        android:text="选择影片" />
+
+     <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/play_btn"
+        android:background="@null"
+        android:textColor="#fff"
+           android:textSize="22sp"
+            android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:drawablePadding="15sp"
+        android:text="播放" />
+
+     <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:drawableTop="@drawable/setting_btn"
+         android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:textColor="#fff"
+           android:textSize="22sp"
+        android:textStyle="bold"
+        android:drawablePadding="15sp"
+        android:text="设置" />
+
+</LinearLayout>

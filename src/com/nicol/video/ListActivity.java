@@ -20,7 +20,12 @@ public class ListActivity extends FragmentActivity {
 	ViewPager mPager;
 	PageIndicator mIndicator;
 
-	Button btn1;
+	Button btnplay;
+	Button btnsetting;
+	
+	View settingView;
+	
+	boolean setShow=false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,9 @@ public class ListActivity extends FragmentActivity {
 		mAdapter = new TestFragmentAdapter(getSupportFragmentManager());
 
 		mPager = (ViewPager) findViewById(R.id.pager);
+		btnplay=(Button)findViewById(R.id.btn_play);
+		btnsetting=(Button)findViewById(R.id.btn_setting);
+		settingView=(View)findViewById(R.id.settingView);
 		mPager.setAdapter(mAdapter);
 
 		CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
@@ -36,6 +44,30 @@ public class ListActivity extends FragmentActivity {
 		indicator.setViewPager(mPager);
 		indicator.setSnap(true);
 
+		btnplay.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(ListActivity.this,
+						VideoPlayerActivity.class);
+				ListActivity.this.startActivity(intent);
+				
+			}
+		});
+		btnsetting.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(setShow){
+					setShow=false;
+					settingView.setVisibility(View.GONE);
+				}else{
+					setShow=true;
+					settingView.setVisibility(View.VISIBLE);
+				}
+			}
+		});
+		
 //		btn1.setOnClickListener(new OnClickListener() {
 //
 //			@Override
