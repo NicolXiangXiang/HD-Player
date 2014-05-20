@@ -24,10 +24,8 @@ public class ListActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list);
-		btn1 = (Button) findViewById(R.id.btn1);
 		mAdapter = new TestFragmentAdapter(getSupportFragmentManager());
 
 		mPager = (ViewPager) findViewById(R.id.pager);
@@ -38,14 +36,14 @@ public class ListActivity extends FragmentActivity {
 		indicator.setViewPager(mPager);
 		indicator.setSnap(true);
 
-		btn1.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(ListActivity.this,
-						VideoPlayerActivity.class);
-				ListActivity.this.startActivity(intent);
-			}
-		});
+//		btn1.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent = new Intent(ListActivity.this,
+//						VideoPlayerActivity.class);
+//				ListActivity.this.startActivity(intent);
+//			}
+//		});
 	}
 }
