@@ -3,6 +3,7 @@ package com.nicol.video;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.viewpagerindicator.PageIndicator;
 
@@ -15,8 +16,11 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TableRow;
 
 public class ListActivity extends FragmentActivity {
@@ -45,16 +49,11 @@ public class ListActivity extends FragmentActivity {
 
 		InitData();
 
-		mAdapter = new TestFragmentAdapter(getSupportFragmentManager());
-		mPager = (ViewPager) findViewById(R.id.pager);
+		InitView();
+		
 		btnplay = (Button) findViewById(R.id.btn_play);
 		btnsetting = (Button) findViewById(R.id.btn_setting);
 		settingView = (View) findViewById(R.id.settingView);
-		mPager.setAdapter(mAdapter);
-		CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
-		mIndicator = indicator;
-		indicator.setViewPager(mPager);
-		indicator.setSnap(true);
 
 		btnplay.setOnClickListener(new OnClickListener() {
 
@@ -77,20 +76,48 @@ public class ListActivity extends FragmentActivity {
 					setShow = true;
 					settingView.setVisibility(View.VISIBLE);
 				}
+				
+				Intent intent = new Intent(ListActivity.this,
+						FourPlayerActivity.class);
+				ListActivity.this.startActivity(intent);
 			}
 		});
 	}
 
 	private void InitView() {
+		tRow1=(TableRow)findViewById(R.id.tRow1);
+		tRow2=(TableRow)findViewById(R.id.tRow2);
+		tRow3=(TableRow)findViewById(R.id.tRow3);
 		for (int i = 0; i < listMovies.size(); i++) {
+
+			Movie movie = listMovies.get(i);
+			movie.imageUrl="http://blogfile.ifeng.com/uploadfiles/blog_attachment/1212/10/6535310_505ffa2c23f724be8dc92deaff71acfc.jpg";
+			movie.popUrl="http://blogfile.ifeng.com/uploadfiles/blog_attachment/1212/10/6535310_505ffa2c23f724be8dc92deaff71acfc.jpg";
+			movie.url="http://www.w3schools.com/html/movie.mp4";
+			
+			ViewGroup viewG = (ViewGroup) LayoutInflater.from(this).inflate(
+					R.layout.list_item, null);
+			ImageView iv = (ImageView)viewG.findViewById(R.id.iv);
+			CheckBox cb = (CheckBox)viewG.findViewById(R.id.cb);
+			cb.setTag(movie);
+			ImageLoader.getInstance().displayImage(movie.imageUrl, iv);
+
 			if (i % 3 == 0) {
-				tRow1.addView(LayoutInflater.from(this).inflate(R.layout.list_item, null));
+				tRow1.addView(viewG);
 			} else if (i % 3 == 1) {
-				tRow1.addView(LayoutInflater.from(this).inflate(R.layout.list_item, null));
+				tRow2.addView(viewG);
 			} else if (i % 3 == 2) {
-				tRow1.addView(LayoutInflater.from(this).inflate(R.layout.list_item, null));
+				tRow3.addView(viewG);
 			}
 		}
+		mAdapter = new TestFragmentAdapter(getSupportFragmentManager(),
+				listMovies);
+		mPager = (ViewPager) findViewById(R.id.pager);
+		mPager.setAdapter(mAdapter);
+		CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
+		mIndicator = indicator;
+		indicator.setViewPager(mPager);
+		indicator.setSnap(true);
 	}
 
 	private void InitData() {

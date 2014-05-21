@@ -4,9 +4,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <LinearLayout>
-    </LinearLayout>
-
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -17,11 +14,11 @@
             android:layout_height="wrap_content" >
 
             <RelativeLayout
-                android:layout_width="960px"
-                android:layout_height="540px"
+                android:layout_width="100px"
+                android:layout_height="100px"
                 android:orientation="vertical" >
 
-                <io.vov.vitamio.widget.VideoView
+                <VideoView
                     android:id="@+id/vv1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
@@ -47,12 +44,13 @@
                         android:textSize="20.0sp" />
                 </LinearLayout>
             </RelativeLayout>
-             <RelativeLayout
-                  android:layout_width="960px"
-                android:layout_height="540px"
+
+            <RelativeLayout
+                android:layout_width="100px"
+                android:layout_height="100px"
                 android:orientation="vertical" >
 
-                <io.vov.vitamio.widget.VideoView
+                <VideoView
                     android:id="@+id/vv2"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
@@ -84,12 +82,13 @@
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-              <RelativeLayout
-                  android:layout_width="960px"
-                android:layout_height="540px"
+
+            <RelativeLayout
+                android:layout_width="100px"
+                android:layout_height="100px"
                 android:orientation="vertical" >
 
-                <io.vov.vitamio.widget.VideoView
+                <VideoView
                     android:id="@+id/vv3"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
@@ -115,12 +114,13 @@
                         android:textSize="20.0sp" />
                 </LinearLayout>
             </RelativeLayout>
-             <RelativeLayout
-                   android:layout_width="960px"
-                android:layout_height="540px"
+
+            <RelativeLayout
+                android:layout_width="100px"
+                android:layout_height="100px"
                 android:orientation="vertical" >
 
-                <io.vov.vitamio.widget.VideoView
+                <VideoView
                     android:id="@+id/vv4"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
@@ -148,4 +148,5 @@
             </RelativeLayout>
         </TableRow>
     </TableLayout>
+
 </RelativeLayout>

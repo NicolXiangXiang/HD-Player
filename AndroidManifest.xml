@@ -35,7 +35,7 @@
         <activity android:name=".OnePlayerActivity" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="landscape"></activity>
         <activity android:name=".TwoPlayerActivity"></activity>
         <activity android:name=".ThreePlayerActivity"></activity>
-        <activity android:name=".FourPlayerActivity"></activity>
+        <activity android:name=".FourPlayerActivity" android:screenOrientation="landscape"></activity>
         <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="VideoPlayerActivity" android:screenOrientation="landscape"></activity>
     </application>
 
