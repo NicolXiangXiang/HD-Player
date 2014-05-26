@@ -5,17 +5,18 @@
     android:orientation="vertical" >
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="540px" >
 
             <RelativeLayout
-                android:layout_width="100px"
-                android:layout_height="100px"
+                android:layout_width="match_parent"
+                android:layout_height="540px"
+                android:layout_weight="1"
                 android:orientation="vertical" >
 
                 <VideoView
@@ -30,6 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:visibility="gone"
                     android:gravity="center_vertical" >
 
                     <ProgressBar
@@ -46,8 +48,9 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="100px"
-                android:layout_height="100px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical" >
 
                 <VideoView
@@ -61,6 +64,7 @@
                     android:id="@+id/vl2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_centerInParent="true"
                     android:gravity="center_vertical" >
 
@@ -81,11 +85,12 @@
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="540dp" >
 
             <RelativeLayout
-                android:layout_width="100px"
-                android:layout_height="100px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical" >
 
                 <VideoView
@@ -99,6 +104,7 @@
                     android:id="@+id/vl3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_centerInParent="true"
                     android:gravity="center_vertical" >
 
@@ -116,8 +122,9 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="100px"
-                android:layout_height="100px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical" >
 
                 <VideoView
@@ -132,6 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:visibility="gone"
                     android:gravity="center_vertical" >
 
                     <ProgressBar
@@ -148,5 +156,47 @@
             </RelativeLayout>
         </TableRow>
     </TableLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_checkbox"
+            android:button="@null"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_checkbox"
+            android:button="@null"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1800px"
+            android:layout_marginTop="540px"
+            android:background="@drawable/play_checkbox"
+            android:button="@null"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="540px"
+            android:background="@drawable/play_checkbox"
+            android:button="@null"
+            android:checked="false" />
+    </RadioGroup>
 
 </RelativeLayout>

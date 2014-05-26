@@ -3,6 +3,7 @@ package com.nicol.video;
 import com.nicol.video.ListActivity.Movie;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
@@ -46,14 +47,19 @@ public final class TestFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-        ViewGroup layout=(ViewGroup)inflater.cloneInContext(getActivity()).inflate(R.layout.pop, null);
-        ImageView iv=(ImageView)layout.findViewById(R.id.iv);
-        ImageLoader.getInstance().displayImage(popUrl, iv);
-        layout.setOnClickListener(new OnClickListener() {
-			
+		ViewGroup layout = (ViewGroup) inflater.cloneInContext(getActivity())
+				.inflate(R.layout.pop, null);
+		ImageView iv = (ImageView) layout.findViewById(R.id.iv);
+		ImageLoader.getInstance().displayImage(popUrl, iv);
+
+		ImageView ivBtn = (ImageView) layout.findViewById(R.id.iv_btn);
+		ivBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				
+				Intent intent = new Intent(getActivity(),
+						VideoPlayerActivity.class);
+				intent.putExtra("URL", url);
+				getActivity().startActivity(intent);
 			}
 		});
 		return layout;

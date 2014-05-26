@@ -9,11 +9,13 @@
         android:layout_height="match_parent" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/iv_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40px"
+        android:layout_marginBottom="60px"
         android:src="@drawable/bf_btn" />
 
 </RelativeLayout>

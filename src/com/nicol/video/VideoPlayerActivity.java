@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class VideoPlayerActivity extends Activity implements OnInfoListener,
 		OnCompletionListener, OnBufferingUpdateListener {
@@ -54,6 +55,8 @@ public class VideoPlayerActivity extends Activity implements OnInfoListener,
 	private MediaController mMediaController;
 	private View mLoadingView;
 
+	private TextView tv_rate;
+
 	@Override
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
@@ -61,8 +64,7 @@ public class VideoPlayerActivity extends Activity implements OnInfoListener,
 		// ~~~ �?��Vitamio是否解压解码�?
 		if (!LibsChecker.checkVitamioLibs(this))
 			return;
-		mPath = "http://www.w3schools.com/html/movie.mp4";
-		mTitle = "test";
+		mPath = getIntent().getStringExtra("URL");
 		// ~~~ 获取播放地址和标�?
 		Intent intent = getIntent();
 		// mPath = intent.getStringExtra("path");
@@ -81,6 +83,7 @@ public class VideoPlayerActivity extends Activity implements OnInfoListener,
 		mOperationBg = (ImageView) findViewById(R.id.operation_bg);
 		mOperationPercent = (ImageView) findViewById(R.id.operation_percent);
 		mLoadingView = findViewById(R.id.video_loading);
+		tv_rate = (TextView) findViewById(R.id.tv_rate);
 
 		// ~~~ 绑定事件
 		// mVideoView.setOnCompletionListener(this);
@@ -97,7 +100,7 @@ public class VideoPlayerActivity extends Activity implements OnInfoListener,
 
 		// 设置显示名称
 		mMediaController = new MediaController(this);
-		mMediaController.setFileName(mTitle);
+		mMediaController.setActivated(true);
 		mVideoView.setMediaController(mMediaController);
 		mVideoView.requestFocus();
 
@@ -301,6 +304,7 @@ public class VideoPlayerActivity extends Activity implements OnInfoListener,
 			mLoadingView.setVisibility(View.GONE);
 			break;
 		case MediaPlayer.MEDIA_INFO_DOWNLOAD_RATE_CHANGED:
+			tv_rate.setText(" "+arg2+"kb/s ");
 			// 显示 下载速度
 			// Logger.e("download rate:" + arg2);
 			// mListener.onDownloadRateChanged(arg2);

@@ -2,8 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#11111a"
     android:orientation="vertical" >
+ <include
+        layout="@layout/nav" android:id="@+id/nav1" />
+  <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="694px"
+        android:layout_below="@id/nav1"
+        android:layout_marginTop="-30px" 
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
 
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:paddingTop="20px"
+        android:layout_below="@id/pager"
+        android:background="#55000000"
+        android:layout_marginTop="-61px" />
     <LinearLayout
         android:id="@+id/linear1"
         android:layout_width="match_parent"
@@ -14,15 +33,14 @@
         android:gravity="center_vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/tv_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:text="HD Player"
             android:textColor="#fff"
-            android:textSize="30sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -46,24 +64,7 @@
             android:layout_marginRight="20dp"
             android:src="@drawable/download_btn" />
     </LinearLayout>
-    <include
-        layout="@layout/nav" android:id="@+id/nav1" />
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="694px"
-        android:layout_below="@id/nav1"
-        android:layout_marginTop="-30px" 
-        android:layout_weight="1" >
-    </android.support.v4.view.ViewPager>
-
-    <com.viewpagerindicator.CirclePageIndicator
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pager"
-        android:layout_marginTop="-61px" />
+   
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -74,6 +75,6 @@
         <include layout="@layout/list_partial" />
     </ScrollView>
 
-    <include layout="@layout/setting" android:layout_alignParentRight="true"  />
+    <include layout="@layout/setting"  />
 
 </RelativeLayout>

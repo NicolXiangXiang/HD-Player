@@ -1,7 +1,13 @@
 package com.nicol.video;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import org.apache.http.util.EncodingUtils;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,13 +25,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 
@@ -37,8 +36,6 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 			}
 		}, 3000);
-		
-		
 
 		// VideoView vd1=(VideoView) findViewById(R.id.videoView1);
 		// VideoView vd2=(VideoView) findViewById(R.id.videoView2);
@@ -56,7 +53,7 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.main, menu);
+		// getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 }
