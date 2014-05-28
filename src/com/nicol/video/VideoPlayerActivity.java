@@ -304,7 +304,8 @@ public class VideoPlayerActivity extends Activity implements OnInfoListener,
 			mLoadingView.setVisibility(View.GONE);
 			break;
 		case MediaPlayer.MEDIA_INFO_DOWNLOAD_RATE_CHANGED:
-			tv_rate.setText(" "+arg2+"kb/s ");
+			mMediaController.setRate(arg2);
+			//tv_rate.setText(" "+arg2+"kb/s ");
 			// 显示 下载速度
 			// Logger.e("download rate:" + arg2);
 			// mListener.onDownloadRateChanged(arg2);

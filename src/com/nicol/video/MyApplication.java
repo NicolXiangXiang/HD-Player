@@ -10,7 +10,7 @@ public class MyApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-				getApplicationContext()).build();
+				getApplicationContext()).threadPoolSize(5).memoryCacheSize(10000).build();
 		ImageLoader.getInstance().init(config);
 	}
 }
